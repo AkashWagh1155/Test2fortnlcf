@@ -11,8 +11,8 @@
   DTS:LocaleID="16393"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{6407F68D-C963-453D-87E9-496E6C65F0DF}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{9B7E2BED-233F-4134-87A6-DE3E886C6444}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -43,7 +43,7 @@ RIGHT("0" + (DT_WSTR,2)DATEPART("mi",GetDate()),2)  +".csv"</DTS:PropertyExpress
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\AkashWagh\Desktop\timestamp created files\gms_account_info_2020-07-03_11_07.csv">
+          DTS:ConnectionString="C:\Users\AkashWagh\Desktop\timestamp created files\gms_account_info_2020-08-24_11_55.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -651,6 +651,12 @@ RIGHT("0" + (DT_WSTR,2)DATEPART("mi",GetDate()),2)  +".csv"</DTS:PropertyExpress
                       cachedDataType="nText"
                       cachedName="Description"
                       lineageId="Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[MasterRecordId]"
+                      cachedDataType="wstr"
+                      cachedLength="36"
+                      cachedName="MasterRecordId"
+                      lineageId="Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[MasterRecordId]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -677,6 +683,28 @@ RIGHT("0" + (DT_WSTR,2)DATEPART("mi",GetDate()),2)  +".csv"</DTS:PropertyExpress
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[Description]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MasterRecordId]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="36"
+                      lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of MasterRecordId]"
+                      name="Copy of MasterRecordId"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\ODBC Source.Outputs[ODBC Source Output].Columns[MasterRecordId]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
