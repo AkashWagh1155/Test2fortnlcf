@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CData Salesforce Source"
+  DTS:DTSID="{3C276F28-BA1C-4232-B63F-AC17DA322CBD}"
+  DTS:CreationName="ODBC">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Dsn=CData Salesforce Source;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
